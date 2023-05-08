@@ -1,44 +1,32 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { Pokemon, Tcg_data } from '../models/stats.model';
 @Component({
   selector: 'app-sceptile',
   templateUrl: './sceptile.component.html',
   styleUrls: ['./sceptile.component.css']
 })
 export class SceptileComponent {
-  data!: Object;
+  data!: Pokemon;
   loading!: boolean;
-  o !:Observable<Object>;
+  o !:Observable<Tcg_data>;
 
 
   constructor(public http: HttpClient) {}
+
   makeRequest(): void {
     console.log("here");
     this.loading = true;
-    this.o = this.http.get('https://jsonplaceholder.typicode.com/posts/1');
+    this.o = this.http.get<Tcg_data>('https://jsonplaceholder.typicode.com/posts/1');
     this.o.subscribe(this.getData);
   }
-  getData = (d : Object) =>
+  getData = (d : any) =>
   {
-    this.data = new Object(d);
+    this.data = d.data;
     this.loading = false;
+    
   }
 
-  makeCompactPost(): void{
-    this.loading = true;
-    this.http
-      .post('https://jsonplaceholder.typicode.com/posts',
-        JSON.stringify({
-          body: 'bar',
-          title: 'foo',
-          userId: 1
-        })
-        )
-        .subscribe(data => {
-          this.data = data;
-          this.loading = false;
-        });
-  }
-
+ 
 }

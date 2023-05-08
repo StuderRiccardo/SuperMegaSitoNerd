@@ -4,7 +4,7 @@ import { SceptileComponent } from './sceptile/sceptile.component';
 
 const routes: Routes = [
   //vanno messi i vari path
-  {path: 'sceptile', component: SceptileComponent}
+  { path: 'sceptile', component: SceptileComponent }
   //va messo il path generic che contiene le altre 5 pagine
 ];
 
