@@ -1,5 +1,8 @@
 <p>sceptile works!</p>
 <button type="button" (click)="makeRequest()">Make Request</button>
 <div *ngIf="loading">loading...</div>
-{{data.name}}
-<img src= "{{data.images.large}}"> 
+<div *ngIf="data.name">
+    {{data.name}} 
+    <img src= "{{data.images.large}}"> 
+</div> 
+

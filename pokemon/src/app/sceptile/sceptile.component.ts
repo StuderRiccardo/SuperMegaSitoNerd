@@ -18,14 +18,15 @@ export class SceptileComponent {
   makeRequest(): void {
     console.log("here");
     this.loading = true;
-    this.o = this.http.get<Tcg_data>('https://jsonplaceholder.typicode.com/posts/1');
+    this.o = this.http.get<Tcg_data>('https://api.pokemontcg.io/v2/cards/xy7-85');
     this.o.subscribe(this.getData);
   }
   getData = (d : any) =>
   {
+
     this.data = d.data;
     this.loading = false;
-    
+    console.log(this.data)
   }
 
  
