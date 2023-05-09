@@ -26,7 +26,7 @@ export class SceptileComponent {
 
     this.data = d.data;
     this.loading = false;
-    console.log(this.data)
+    
   }
 
  
