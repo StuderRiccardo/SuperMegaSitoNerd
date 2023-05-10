@@ -9,6 +9,7 @@ import {  HttpClientModule } from '@angular/common/http';
 import { UmbreonComponent } from './umbreon/umbreon.component';
 import { GengarComponent } from './gengar/gengar.component';
 import { GreninjaComponent } from './greninja/greninja.component';
+import { GeneralComponent } from './general/general.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { GreninjaComponent } from './greninja/greninja.component';
     ArceusComponent,
     UmbreonComponent,
     GengarComponent,
-    GreninjaComponent
+    GreninjaComponent,
+    GeneralComponent
   ],
   imports: [
     BrowserModule,

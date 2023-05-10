@@ -6,6 +6,9 @@
         <li class="nav-item nav-link fw-bold" routerLink="/greninja">Greninja</li>
         <li class="nav-item nav-link fw-bold" routerLink="/sceptile">Sceptile</li>
         <li class="nav-item nav-link fw-bold" routerLink="/umbreon">Umbreon</li>  
+        <br>
+        <li class="nav-item nav-link" [routerLink]="['/general', 'sceptile']" routerLinkActive="active-menu"> Sceptile</li>
+      
       </ul>
     </div>
     <router-outlet></router-outlet>
