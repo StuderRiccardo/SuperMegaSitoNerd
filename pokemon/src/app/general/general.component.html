@@ -1,6 +1,8 @@
-<p>general works!</p>
 <div class="box">
     <h1 class="name">{{poke.data.name}}</h1>
+    <h2>Numero Pokedez: {{poke.data.nationalPokedexNumbers}}</h2>
+    <h2>Rarità della carta: {{poke.data.rarity}}</h2>
+    
     <br>
     <img class="img" alt="" src="{{poke.data.images.small}}">
 </div>
@@ -10,4 +12,4 @@
 <button (click)="getRouterParam" routerLink="/general/sceptile">sceptile</button>
 <button (click)="getRouterParam" routerLink="/general/umbreon">umbreon</button>
 <br>
-<button *ngFor="let item of carta" (click)="makerequest(item.rarity)">{{item.name}}</button>
+<button *ngFor="let item of carta" (click)="makerequest(item.rarity)">{{item.name}}  {{item.name}} </button>
