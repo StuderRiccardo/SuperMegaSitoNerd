@@ -1,13 +1,3 @@
-export interface all{
-  name : string,
-  img : string
-}
-export const Es =[
-
-  {name : Tcg_data[data.any],img : 'Tcg_data[data.image.small]'},
-  
-
-]
 export interface Tcg_data{
     data : Pokemon
 }
