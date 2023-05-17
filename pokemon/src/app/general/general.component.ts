@@ -12,6 +12,7 @@ export class GeneralComponent {
   poke : any = {};
   link : string = '';
   carta : Pokemon[] = []
+  
   //Riceve l'oggetto ActivatedRoute come dependency injection
   constructor(private route: ActivatedRoute, public http: HttpClient) {
     this.makerequest("");
@@ -59,5 +60,7 @@ export class GeneralComponent {
         this.link = "https://api.pokemontcg.io/v2/cards/sm1-80" // -- Umbreon
         break;}
   }
+  
+
 }
 
